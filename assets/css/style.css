@@ -38,7 +38,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	gap: 2rem;
+	gap: 1rem;
 	padding: 1rem 0;
 	flex-wrap: wrap;
 	width: 100%;
@@ -46,8 +46,9 @@ body {
 }
 
 .left-col {
-	flex: 1 1 50%;
-	min-width: 300px;
+	flex: 1 1 55%;
+	min-width: 800px;
+	order: 1;
 }
 
 .right-col {
@@ -56,26 +57,29 @@ body {
 	align-items: right;
 	text-align: right;
 	box-sizing: border-box;
+	order: 2;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
 	.cols {
 		flex-direction: column;
 	}
-
 	.left-col, .right-col {
 		flex: 1 1 100%;
 		min-width: 0;
 	}
-
 	.left-col {
 		align-items: left;
+		width: 100%;
 	}
-
 	.right-col {
 		text-align: right;
 		width: 100%;
 		justify-content: flex-end;
+	}
+	.content {
+		display: inline-block;
+		max-width: 100%;
 	}
 }
 
@@ -88,6 +92,7 @@ body {
 	width: 40%;
 	font-family: "AnonymousPro-Regular";
 	font-size: 25px;
+	margin-top: 1rem;
 }
 
 #terminal-input::placeholder {
